@@ -15,7 +15,7 @@ int main() {
     
     printf("Vamos começar digitando as informações da primeira carta! \n");
 
-    printf("Digite uma letra entre 'A' e 'H' para o estado: \n ");
+    printf("Digite uma letra entre 'A' e 'H' para o estado: \n");
     scanf("%c" , &estad1);
 
     printf("Agora digite o código da carta: \n");
@@ -38,8 +38,8 @@ int main() {
 
     printf("Agora vamos digitar ass informações da segunda carta! \n");
 
-    printf("Digite uma letra entre 'A' e 'H' para o estado: \n ");
-    scanf("%c" , &estad2);
+    printf("Digite uma letra entre 'A' e 'H' para o estado: \n");
+    scanf("%c" , &estad2 );
 
     printf("Agora digite o código da carta: \n");
     scanf("%s" , &cdgcarta2 );
@@ -61,11 +61,11 @@ int main() {
 
     printf("Aqui está as informações das cartas que foram digitadas: \n");
 
-    printf("Carta 1: \nEstado: %c \nCódigo da carta: %c%s \nNome da cidade: %s \nPopulação: %d \n" , estad1 , cdgcarta1 , cdd1 , 
+    printf("Carta 1: \nEstado:%c \nCódigo da carta:%c%s \nNome da cidade: %s \nPopulação: %d \n" , estad1 , cdgcarta1 , cdd1 , 
     populc1 );
-    printf("Área: %2.f \nPIB: %2.f \nNúmeros de pontos turíscos: %d \n" , area1 , pib1 , pnturis1 );
+    printf("Área: %2.f km² \nPIB: %2.f Bilhões de reais \nNúmeros de pontos turíscos: %d \n" , area1 , pib1 , pnturis1 );
 
-    printf("Carta 2: \nEstado: %c \nCódigo da carta: %c%s \nNome da cidade: %s \nPopulação: %d \n" , estad2 , cdgcarta2 , cdd2 , 
+    printf("Carta 2: \nEstado:%c \nCódigo da carta:%c%s \nNome da cidade: %s \nPopulação: %d \n" , estad2 , cdgcarta2 , cdd2 , 
     populc2 );
-    printf("Área: %2.f \nPIB: %2.f \nNúmeros de pontos turíscos: %d \n" , area2 , pib2 , pnturis2 );
+    printf("Área: %2.f km² \nPIB: %2.f bilhões de reais \nNúmeros de pontos turíscos: %d \n" , area2 , pib2 , pnturis2 );
 }
