@@ -1,82 +1,135 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main(){
+    int carta, carta2;
+    char estado, estado2;
+    char cidade[10], cidade2[10];
+    int populacao, populacao2;
+    float area, area2;
+    float pib, pib2;
+    int pontT, pontT2;
+    float dpop, dpop2;
+    float pibpc, pibpc2;
+    float SP,SP2;
 
-int main() {
-    int populc1 , populc2 , pnturis1 , pnturis2  ;
-    float area1 , area2 , pib1 , pib2 , dnsdpp1 , dnsdpp2 , pibpcpt1 , pibpcpt2 ;
-    char estad1 , cdd1 [30] , cdd2 [30] , cdgcarta1 [2]  , cdgcarta2 [2]  ;
-    char estad2 ;
-
-    printf("Bem vindo ao jogo super trunfo! \n");
+    printf("Bem vindo ao jogo super trufo! \n");
+    printf("digite as informacões da primeira carta \n");
     
-    printf("Vamos começar digitando as informações da primeira carta! \n");
-
-    printf("Digite uma letra entre 'A' e 'H' para o estado: \n");
-    scanf("%c" , &estad1);
-
-    printf("Agora digite o código da carta: \n");
-    scanf("%s" , &cdgcarta1 );
-
-    printf("Agora digite o nome da cidade: \n");
-    scanf("%s" , &cdd1 );
+   
+    printf("Digite o numero da carta: ");
+    scanf("%d", &carta);
+    getchar();
+ 
+    printf("Digite o Estado: ");
+    scanf(" %c", &estado);
+ 
+    printf("Digite o nome da cidade: ");
     
-    printf("Agora digite o tamanho da população dessa cidade: \n");
-    scanf("%d" , &populc1 );
+    getchar(); 
+    fgets(cidade, sizeof(cidade), stdin);
+    cidade[strcspn(cidade, "\n")] = 0; 
+ 
+ 
+    printf("Digite a populacao: ");
+    scanf("%d", &populacao);
+ 
+    printf("Digite a area (km^2): ");
+    scanf("%f", &area);
+ 
+    printf("Digite o PIB: ");
+    scanf("%f", &pib);
+ 
+    printf("Quantos pontos turisticos: ");
+    scanf("%d", &pontT);
+
     
-    printf("Agora digite a área da cidade em km²: \n");
-    scanf("%f" , &area1);
+    dpop = (float) populacao / area;
+    pibpc = (float) pib / populacao;
 
-    printf("Agora digite o PIB da cidade: \n");
-    scanf("%f" , &pib1 );
-
-    printf("Agora digite O número de pontos turíscos: \n");
-    scanf("%d" , &pnturis1 );
-
-    dnsdpp1 = (float) populc1 / area1 ;
-    pibpcpt1 = (float) pib1 / populc1 ;
-
-    printf("Agora vamos digitar ass informações da segunda carta! \n");
-
-    printf("Digite uma letra entre 'A' e 'H' para o estado:(2) \n");
-    scanf("%c" , &estad2 );
-
-    printf("Agora digite o código da carta:(2) \n");
-    scanf("%s" , &cdgcarta2 );
-
-    printf("Agora digite o nome da cidade:(2) \n");
-    scanf("%s" , &cdd2 );
     
-    printf("Agora digite o tamanho da população dessa cidade:(2) \n");
-    scanf("%d" , &populc2 );
+
+    printf("Agora digte as informações da segunda carta: \n");
+
+   
+    printf("Digite o numero da carta: ");
+    scanf("%d", &carta2);
+    getchar();
+  
+    printf("Digite o Estado: ");
+    scanf(" %c", &estado2);
+  
+    printf("Digite o nome da cidade: ");
     
-    printf("Agora digite a área da cidade em km²:(2) \n");
-    scanf("%f" , &area2);
+    getchar();
+    fgets(cidade2, sizeof(cidade2), stdin);
+    cidade2[strcspn(cidade2, "\n")] = 0; 
+  
+  
+    printf("Digite a populacao: ");
+    scanf("%d", &populacao2);
+  
+    printf("Digite a area (km^2): ");
+    scanf("%f", &area2);
+  
+    printf("Digite o PIB: ");
+    scanf("%f", &pib2);
+  
+    printf("Quantos pontos turisticos: ");
+    scanf("%d", &pontT2);
 
-    printf("Agora digite o PIB da cidade:(2) \n");
-    scanf("%f" , &pib2 );
+    
 
-    printf("Agora digite O número de pontos turíscos:(2) \n");
-    scanf("%d" , &pnturis2 );
+    dpop2 = (float) populacao2 / area2;
+    pibpc2 = (float) pib2 / populacao2;
+ 
 
-    printf("Aqui está as informações das cartas que foram digitadas: \n");
-
-    dnsdpp2 = (float) populc2 / area2 ;
-    pibpcpt2 = (float) pib2 / populc2 ;
-
-    printf("Carta 1: \nEstado:%c \nCódigo da carta:%s \nNome da cidade: %c \nPopulação: %d \n" , estad1 , cdgcarta1 , cdd1 , 
-    populc1 );
-    printf("Área: %2.f km² \nPIB: %2.f Bilhões de reais \nNúmeros de pontos turíscos: %d \n" , area1 , pib1 , pnturis1 );
-    printf("Densidade populacional: %.2f  hab/km² \nPIB per capita: %2.f \n " , dnsdpp1 , pibpcpt1) ;
-
-    printf("Carta 2: \nEstado:%c \nCódigo da carta:%s \nNome da cidade: %c \nPopulação: %d \n" , estad2 , cdgcarta2 , cdd2 , 
-    populc2 );
-    printf("Área: %2.f km² \nPIB: %2.f bilhões de reais \nNúmeros de pontos turíscos: %d \n" , area2 , pib2 , pnturis2 );
-    printf("Densidade populacional: %.2f  hab/km² \nPIB per capita: %2.f \n " , dnsdpp2 , pibpcpt2) ;
+    
+    
+     
+    
 
 
+    
+    printf("\nCarta 1: \n") ;
+    printf("Estado: %c \n" , estado) ;
+    printf("Codigo: %c0%d\n", estado, carta);
+    printf("Cidade: %s\n", cidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area: %.2f km^2\n", area);
+    printf("PIB: %.2f\n", pib);
+    printf("Pontos Turisticos: %d\n", pontT);
+    printf("Densidade Populacional: %f hab/km^2\n", dpop);
+    printf("PIB per capita: %f\n", pibpc);
+
+    printf("\nCarta 2: \n") ;
+    printf("Estado: %c \n" , estado2) ;
+    printf("Codigo: %c0%d\n", estado2,carta2);
+    printf("Cidade: %s\n", cidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area: %.2f km^2\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos Turisticos: %d\n", pontT2);
+    printf("Densidade Populacional: %f hab/km^2\n", dpop2);
+    printf("PIB per capita: %f\n", pibpc2);
+
+
+    SP = (populacao, area, pib, pontT,pibpc) / dpop;
+    SP2 = (populacao2, area2, pib2, pontT2,pibpc2) / dpop2;
+
+    printf("\nSe carta 1 venceu,aparecera '1' ,caso carta 2 vença, aparecera '0' \n");
+
+    printf("\nPopulacao: venceu %d\n", populacao > populacao2 );
+    printf("Area: venceu %d \n", area > area2);
+    printf("PIB: venceu  %d\n", pib > pib2);
+    printf("Pontos Turisticos: venceu %d\n", pontT > pontT2);
+    printf("Densidade Populacional: venceu %d\n", dpop < dpop2);
+    printf("PIB per capita: venceu %d\n", pibpc > pibpc2);
+    printf("Super poder: venceu %d\n",SP > SP2 );
+
+    
+
+
+    return 0;
 }
